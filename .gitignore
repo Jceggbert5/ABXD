@@ -8,6 +8,7 @@ img/logos/*.png
 img/logos/*.gif
 img/logos/*.jpg
 img/logos/*.ico
+plugins/**
 !plugins/uploader/
 downloads/
 securimage/
