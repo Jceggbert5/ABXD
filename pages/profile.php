@@ -236,9 +236,9 @@ if(!$mobileLayout)
 	echo "
 	<table>
 		<tr>
-			<td style=\"width: 60%; border: 0px none; vertical-align: top; padding-right: 1em; padding-bottom: 1em;\">";
+			<td style=\"width: 60%; border: 0px none; vertical-align: top; padding-right: 1em; padding-bottom: 1em;\" class=\"profileTable\">";
 
-echo "<table class=\"outline margin\">";
+echo "<table class=\"outline margin profileTable\">";
 
 $cc = 0;
 foreach($profileParts as $partName => $fields)
@@ -277,7 +277,7 @@ if(!$mobileLayout)
 {
 	write("
 				</td>
-				<td style=\"vertical-align: top; border: 0px none;\">
+				<td style=\"vertical-align: top; border: 0px none;\" class=\"profileComments\">
 	");
 
 	include("usercomments.php");
