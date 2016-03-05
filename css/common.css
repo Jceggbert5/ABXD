@@ -378,7 +378,7 @@ ul.breadcrumbs li
 }
 ul.breadcrumbs li:before
 {
-	content:"\bb  ";
+	content:"» ";
 }
 
 ul.breadcrumbs li:first-child:before
