@@ -7,8 +7,6 @@ function makeForumListing($parent)
 	$pl = $loguser['powerlevel'];
 	if ($pl < 0) $pl = 0;
 
-	$cellClass = 0; //shouldn't need this, but whatever
-
 	$lastCatID = -1;
 	$rFora = Query("	SELECT f.*,
 							c.name cname,
@@ -50,8 +48,6 @@ function makeForumListing($parent)
 
 		if($firstCat || $forum['catid'] != $lastCatID)
 		{
-			$cellClass = 0; //shouldn't need this, but whatever
-		
 			$lastCatID = $forum['catid'];
 			$firstCat = false;
 
@@ -112,7 +108,7 @@ function makeForumListing($parent)
 
 		$theList .=
 "
-		<tr class=\"cell$cellClass\">
+		<tr class=\"cell1\">
 			<td>
 				<h4 $ignoreClass>".
 					$NewIcon.' '.actionLinkTag($forum['title'], "forum",  $forum['id']) . "
@@ -126,8 +122,6 @@ function makeForumListing($parent)
 				$lastLink
 			</td>
 		</tr>";
-		
-		$cellClass = ($cellClass + 1) % 2;
 	}
 
 	write(
